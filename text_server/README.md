@@ -8,5 +8,5 @@ Text server is a component that detects text on images.
 > mix deps.get
 > mix compile
 > mix run  --no-halt
-> mix run .\lib\receive.exs --no-halt
+> mix run ./lib/receive.exs --no-halt
 ```
