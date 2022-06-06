@@ -57,7 +57,7 @@ namespace
 
         void shl(size_t count)
         {
-            assert(count<m_use);
+            assert(count < m_use);
 
             const size_t diff = m_use - count;
             std::memmove(m_data.data(), m_data.data()+count, diff);
@@ -90,6 +90,8 @@ struct SimplePocoHandlerImpl
     Buffer outBuffer;
     std::vector<char> tmpBuff;
 };
+
+
 SimplePocoHandler::SimplePocoHandler(const std::string& host, uint16_t port) :
         m_impl(new SimplePocoHandlerImpl)
 {
@@ -112,16 +114,15 @@ void SimplePocoHandler::loop()
             if (m_impl->socket.available() > 0)
             {
                 size_t avail = m_impl->socket.available();
-                if(m_impl->tmpBuff.size()<avail)
+                if (m_impl->tmpBuff.size() < avail)
                 {
-                    m_impl->tmpBuff.resize(avail,0);
+                    m_impl->tmpBuff.resize(avail, 0);
                 }
 
                 m_impl->socket.receiveBytes(&m_impl->tmpBuff[0], avail);
                 m_impl->inputBuffer.write(m_impl->tmpBuff.data(), avail);
-
             }
-            if(m_impl->socket.available() < 0)
+            if (m_impl->socket.available() < 0)
             {
                 std::cerr << "SOME socket error!!!" << std::endl;
             }
@@ -129,7 +130,7 @@ void SimplePocoHandler::loop()
             if (m_impl->connection && m_impl->inputBuffer.available())
             {
                 size_t count = m_impl->connection->parse(m_impl->inputBuffer.data(),
-                        m_impl->inputBuffer.available());
+                                                         m_impl->inputBuffer.available());
 
                 if (count == m_impl->inputBuffer.available())
                 {
@@ -150,7 +151,7 @@ void SimplePocoHandler::loop()
 
     } catch (const Poco::Exception& exc)
     {
-        std::cerr<< "Poco exception " << exc.displayText();
+        std::cerr << "Poco exception " << exc.displayText();
     }
 }
 
@@ -184,12 +185,12 @@ void SimplePocoHandler::onConnected(AMQP::Connection *connection)
 void SimplePocoHandler::onError(
         AMQP::Connection *connection, const char *message)
 {
-    std::cerr<<"AMQP error "<<message<<std::endl;
+    std::cerr << "AMQP error " << message << std::endl;
 }
 
 void SimplePocoHandler::onClosed(AMQP::Connection *connection)
 {
-    std::cout<<"AMQP closed connection"<<std::endl;
+    std::cout << "AMQP closed connection" << std::endl;
     m_impl->quit  = true;
 }
 

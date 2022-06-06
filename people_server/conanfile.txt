@@ -3,6 +3,7 @@ opencv/4.5.5
 amqp-cpp/4.3.16
 poco/1.11.2
 nlohmann_json/3.10.5
+inih/55
 
 [generators]
 cmake

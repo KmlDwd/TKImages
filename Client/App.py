@@ -207,6 +207,15 @@ def add_node(sender, app, u):
                         dpg.add_input_text(
                             width=150, default_value="", no_spaces=True, decimal=True)
 
+                elif v_filtered[0] == "int_range":
+                    with dpg.group(xoffset=120, horizontal=True, show=show_input):
+                        dpg.add_text(k, label=k)
+                        dpg.add_input_int(width=150, default_value=0,
+                                          min_clamped=True,
+                                          max_clamped=True,
+                                          min_value=v_filtered[1],
+                                          max_value=v_filtered[2])
+
                 elif v_filtered[0] == "string":
                     with dpg.group(xoffset=120, horizontal=True, show=show_input):
                         dpg.add_text(k, label=k)

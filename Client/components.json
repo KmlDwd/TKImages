@@ -59,7 +59,7 @@
       "drizzle",
       "rain fog"
     ],
-    "precision": ["int", 0, 9]
+    "precision": ["int_range", 0, 9]
   },
 
   "Faces": {
