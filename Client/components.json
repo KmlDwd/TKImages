@@ -44,6 +44,24 @@
     "percent": ["float", "Similarity percent"]
   },
 
+  "Weather": {
+    "type": [
+      "choice",
+      "mostlycloudy",
+      "moderate rain",
+      "clear",
+      "rain showers",
+      "mainly clear",
+      "cloudy",
+      "snow",
+      "fog",
+      "rain",
+      "drizzle",
+      "rain fog"
+    ],
+    "precision": ["int", 0, 9]
+  },
+
   "Faces": {
     "type": ["choice_propagate", "faces", "smiles", "faces&smiles"],
     "no faces": ["float", "faces"],

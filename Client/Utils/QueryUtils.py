@@ -4,7 +4,7 @@ from typing import Sequence
 
 from ColorFilter.Color import ColorQuery
 from Logger.CustomLogFormatter import CustomLogFormatter
-from RabbitMq.Query import SizeQuery, Query, DogsQuery, SimilarityQuery, FacesQuery,TextQuery
+from RabbitMq.Query import SizeQuery, Query, DogsQuery, SimilarityQuery, FacesQuery, TextQuery, WeatherQuery
 from RabbitMq.RabbitMQClient import RabbitMQProducer, RabbitMQSyncConsumer
 
 logger = logging.getLogger("QueryUtils")
@@ -40,6 +40,7 @@ class QueryBuilder:
             'Similarity': lambda paths, data: SimilarityQuery(paths, data),
             'Faces': lambda paths, data: FacesQuery(paths, data),
             'Text': lambda paths, data: TextQuery(paths, data),
+            'Weather': lambda paths, data: WeatherQuery(paths, data)
         }[self.__query_type](self.__query_paths, self.__query_data)
 
 
@@ -61,7 +62,8 @@ class QueryExecutor:
         current_query = 1
         for query in queries:
             query.paths = new_paths
-            logger.info(f"sent {query.json()} to {query.topic()} @ {query.exchange()}")
+            logger.info(
+                f"sent {query.json()} to {query.topic()} @ {query.exchange()}")
             self.__producer.publish_rmq_message(query)
 
             self.__consumer.consume(callback)
