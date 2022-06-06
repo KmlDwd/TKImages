@@ -11,4 +11,5 @@ gnome-terminal -- python3 SimilarityConsumer.py
 gnome-terminal -- python3 SizeFilterConsumer.py 
 gnome-terminal -- python3 FacesFilterConsumer.py 
 gnome-terminal -- python3 WeatherFilterConsumer.py 
+gnome-terminal -- cd ../people_server/build && peopleServer
 gnome-terminal -- python3 App.py 
