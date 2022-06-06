@@ -10,4 +10,5 @@ start cmd /k python SimilarityConsumer.py
 start cmd /k python SizeFilterConsumer.py 
 start cmd /k python FacesFilterConsumer.py 
 start cmd /k python WeatherFilterConsumer.py 
+start "server-people" cmd.exe /k "cd ../people_server/build/bin && peopleServer.exe"
 start cmd /k python App.py 

@@ -67,5 +67,10 @@
         "no smiles": ["float", "smiles"],
         "comparator": ["choice_propagate", ">", ">=", "<", "<=", "=="],
         "threshold": ["float", "equal"]
+    },
+    "People": {
+        "hasPeople": ["choice_propagate", "true", "false"],
+        "minPeople": ["int", "true"],
+        "maxPeople": ["int", "true"]
     }
 }
