@@ -128,6 +128,16 @@ class SimpleQuery(Query):
     def topic():
         return 'size'
 
+
+class MetadataQuery(Query):
+    def __init__(self, paths: Sequence[str], params):
+        super().__init__(paths, params)
+
+    @staticmethod
+    def topic():
+        return "metadata"
+
+
 class TextQuery(Query):
     def __init__(self, paths, params):
         super().__init__(paths, params)
