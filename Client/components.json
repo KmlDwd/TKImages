@@ -59,7 +59,7 @@
       "drizzle",
       "rain fog"
     ],
-    "precision": ["int", 0, 9]
+    "precision": ["int_range", 0, 9]
   },
 
   "Faces": {
@@ -86,5 +86,11 @@
     "containsText": ["string", "true"],
     "minLength": ["int", "true"],
     "maxLength": ["int", "true"]
+  },
+
+  "People": {
+    "hasPeople": ["choice_propagate", "true", "false"],
+    "minPeople": ["int", "true"],
+    "maxPeople": ["int", "true"]
   }
 }
