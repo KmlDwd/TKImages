@@ -194,6 +194,10 @@ def add_node(sender, app, u):
                                           user_data=[node_id, u],
                                           callback=choice_propagate)
                         capture = v_filtered[2]
+                elif v_filtered[0] == "optional_float":
+                    with dpg.group(xoffset=120, horizontal=True, show=show_input):
+                        dpg.add_text(k, label=k)
+                        dpg.add_input_text(width=150, default_value="")
                 elif v_filtered[0] == "float":
                     with dpg.group(xoffset=120, horizontal=True, show=show_input):
                         dpg.add_text(k, label=k)
