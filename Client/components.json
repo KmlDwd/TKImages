@@ -124,7 +124,7 @@
     ]
   },
 
-  "Body parts": {
+  "Body": {
     "detect faces": ["choice_propagate", "true", "false"],
     "face confidence": ["int_range", "true", 0, 99],
     "detect hands": ["choice_propagate", "true", "false"],
@@ -141,7 +141,7 @@
     "confidence": ["int_range", 0, 99]
   },
 
-  "Objects from another image": {
+  "SimilarThings": {
     "path": ["file_selector", "Path"]
   }
 }
