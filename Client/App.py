@@ -40,6 +40,8 @@ health_dict = {
     'color_service': -1,
     'dog_service': -1,
     'faces_service': -1,
+    'body_service': -1,
+    'things_service': -1,
     'similarity_service': -1
 }
 online_color = (0, 255, 0)

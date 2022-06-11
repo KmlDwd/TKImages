@@ -92,5 +92,56 @@
     "hasPeople": ["choice_propagate", "true", "false"],
     "minPeople": ["int", "true"],
     "maxPeople": ["int", "true"]
+  },
+
+  "Format": {
+    "format": [
+      "choice",
+      ".jpeg",
+      ".jpeg2000",
+      ".gif",
+      ".bmp",
+      ".png",
+      ".webp",
+      ".ico",
+      ".img",
+      ".xcf",
+      ".cgm",
+      ".svg",
+      ".blend",
+      ".xaml",
+      ".pdf",
+      ".jpg"
+    ]
+  },
+
+  "Style": {
+    "style": [
+      "choice",
+      "photo",
+      "clip art",
+      "line drawing"
+    ]
+  },
+
+  "Body": {
+    "detect faces": ["choice_propagate", "true", "false"],
+    "face confidence": ["int_range", "true", 0, 99],
+    "detect hands": ["choice_propagate", "true", "false"],
+    "hands confidence": ["int_range", "true", 0, 99]
+  },
+
+  "Animal": {
+    "species": [
+      "choice",
+      "tiger",
+      "elephant",
+      "panda"
+    ],
+    "confidence": ["int_range", 0, 99]
+  },
+
+  "SimilarThings": {
+    "path": ["file_selector", "Path"]
   }
 }
