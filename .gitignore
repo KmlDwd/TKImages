@@ -140,3 +140,4 @@ hs_err_pid*
 *.pyc
 node_modules
 env
+.skey

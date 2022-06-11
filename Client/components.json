@@ -92,5 +92,9 @@
     "hasPeople": ["choice_propagate", "true", "false"],
     "minPeople": ["int", "true"],
     "maxPeople": ["int", "true"]
+  },
+
+  "Style": {
+    "styles": ["photo", "clip art", "line drawing"]
   }
 }
