@@ -92,6 +92,14 @@ class WeatherQuery(Query):
     def topic():
         return 'weather'
 
+class FormatQuery(Query):
+    def __init__(self, paths, params):
+        super().__init__(paths, params)
+
+    @staticmethod
+    def topic():
+        return 'format'
+
 class PeopleQuery(Query):
     def __init__(self, paths, params):
         super().__init__(paths, params)
