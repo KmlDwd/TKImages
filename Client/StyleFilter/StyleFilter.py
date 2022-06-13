@@ -69,5 +69,5 @@ def process_request(body):
     params = body["params"]
 
     result = StyleModule().detect_styles(paths=body["paths"],
-                           styles=params["styles"])
+                           styles=params["style"])
     return result
