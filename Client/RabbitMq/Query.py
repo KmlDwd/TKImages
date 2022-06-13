@@ -108,6 +108,22 @@ class PeopleQuery(Query):
     def topic():
         return 'people'
 
+class BodyQuery(Query):
+    def __init__(self, paths, params):
+        super().__init__(paths, params)
+
+    @staticmethod
+    def topic():
+        return 'body'
+        
+class SimilarThingsQuery(Query):
+    def __init__(self, paths, params):
+        super().__init__(paths, params)
+
+    @staticmethod
+    def topic():
+        return 'similar_things'
+
 
 class SimilarityQuery(Query):
     def __init__(self, paths, params):
