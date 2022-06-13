@@ -62,14 +62,6 @@
     "precision": ["int_range", 0, 9]
   },
 
-  "Formats": {
-    "types": [
-      ".jpeg", ".jpeg2000", ".gif", ".bmp", ".png",
-      ".webp", ".ico", ".img", ".xcf", ".cgm", ".svg",
-      ".blend", ".xaml", ".pdf", ".jpg"
-    ]
-  },
-
   "Faces": {
     "type": ["choice_propagate", "faces", "smiles", "faces&smiles"],
     "no faces": ["float", "faces"],

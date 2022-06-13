@@ -14,5 +14,5 @@ def process_request(body):
     body = json.loads(body)
     params = body["params"]
 
-    result = check_format(paths=body["paths"],format_types=params["types"])
+    result = check_format(paths=body["paths"],format_types=params["format"])
     return result
