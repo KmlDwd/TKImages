@@ -13,6 +13,7 @@ start cmd /k python WeatherFilterConsumer.py
 start cmd /k python BodyFilterConsumer.py
 start cmd /k python SimilarThingsFilterConsumer.py
 start cmd /k python FormatFilterConsumer.py
+start cmd /k python AnimalFilterConsumer.py
 start cmd /k npm start
 start "server-text" cmd.exe /k "cd ../text_server && mix run ./lib/receive.exs --no-halt"
 start "server-people" cmd.exe /k "cd ../people_server/build/bin && peopleServer.exe"
