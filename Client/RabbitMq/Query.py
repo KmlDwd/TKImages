@@ -100,6 +100,14 @@ class FormatQuery(Query):
     def topic():
         return 'format'
 
+class AnimalQuery(Query):
+    def __init__(self, paths, params):
+        super().__init__(paths, params)
+
+    @staticmethod
+    def topic():
+        return 'animal'
+
 class PeopleQuery(Query):
     def __init__(self, paths, params):
         super().__init__(paths, params)
