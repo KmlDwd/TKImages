@@ -11,6 +11,7 @@ gnome-terminal -- python3 SimilarityConsumer.py
 gnome-terminal -- python3 SizeFilterConsumer.py
 gnome-terminal -- python3 FacesFilterConsumer.py
 gnome-terminal -- python3 WeatherFilterConsumer.py
+gnome-terminal -- python3 StyleFilterConsumer.py
 gnome-terminal -- python3 BodyFilterConsumer.py
 gnome-terminal -- python3 SimilarThingsFilterConsumer.py
 gnome-terminal -- python3 FormatFilterConsumer.py

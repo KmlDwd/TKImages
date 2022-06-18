@@ -140,4 +140,5 @@ hs_err_pid*
 *.pyc
 node_modules
 env
+.skey
 model_weights.pth

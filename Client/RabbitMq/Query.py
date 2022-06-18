@@ -177,3 +177,11 @@ class TextQuery(Query):
     @staticmethod
     def topic():
         return 'text'
+
+class StyleQuery(Query):
+    def __init__(self, paths, params):
+        super().__init__(paths, params)
+
+    @staticmethod
+    def topic():
+        return 'style'

@@ -10,6 +10,7 @@ start cmd /k python SimilarityConsumer.py
 start cmd /k python SizeFilterConsumer.py
 start cmd /k python FacesFilterConsumer.py
 start cmd /k python WeatherFilterConsumer.py
+start cmd /k python StyleFilterConsumer.py
 start cmd /k python BodyFilterConsumer.py
 start cmd /k python SimilarThingsFilterConsumer.py
 start cmd /k python FormatFilterConsumer.py
