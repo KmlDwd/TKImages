@@ -430,7 +430,7 @@ if __name__ == '__main__':
                 with dpg.group():
                     for k in health_dict.keys():
                         dpg.add_text(k)
-                with dpg.drawlist(width=200, height=160):
+                with dpg.drawlist(width=200, height=300):
                     for i, k in enumerate(health_dict.keys()):
                         draw_status(status_separation/2 +
                                     i * status_separation, k)
