@@ -18,9 +18,12 @@ class AnimalModule():
         filtered_paths = []
         for file in paths:
             evaluated_animals = self.detect_animal(file)
-            maxVal = max(evaluated_animals.values())
-            if max(evaluated_animals, key=evaluated_animals.get) == animalSpecies and maxVal >= confidence:
-                filtered_paths.append(file)
+            try:
+                maxVal = max(evaluated_animals.values())
+                if max(evaluated_animals, key=evaluated_animals.get) == animalSpecies and maxVal >= confidence:
+                    filtered_paths.append(file)
+            except ValueError:
+                pass
 
         return filtered_paths
 
